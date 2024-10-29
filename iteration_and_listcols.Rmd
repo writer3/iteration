@@ -190,9 +190,50 @@ listcol_df |>
 
 ```
 
+### NSDUH 
 
 ```{r}
-
+nsduh_table_format = function(html, table_num) {
+  
+  out_table =
+    html |> 
+    html_table() |> 
+    nth(table_num) |> 
+    slice(-1) |> 
+    select(-contains("P Value"))
+  
+  return(out_table)
+  
+}
 ```
 
+We need to import the html, and then extract the correct tables.
+
+```{r}
+nsduh_url = "http://samhda.s3-us-gov-west-1.amazonaws.com/s3fs-public/field-uploads/2k15StateFiles/NSDUHsaeShortTermCHG2015.htm"
+
+nsduh_html = read_html(nsduh_url)
+```
+
+
+```{r}
+nsduh_table_format(html = nsduh_html, table_num = 1)
+nsduh_table_format(html = nsduh_html, table_num = 4)
+nsduh_table_format(html = nsduh_html, table_num = 5)
+```
+
+
+Learning Assessment
+Make a table with drug names, table number, and column with the associated tables
+```{r}
+nsduh_df =
+  tibble(
+    drug = c("marijuana", "cocaine", "heroin"),
+    table_n = c(1, 4, 5)
+  ) |> 
+  mutate(table = map(table_n, nsduh_table_format, html = nsduh_html)) |> 
+  unnest(table)
+
+
+```
 
