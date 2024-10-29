@@ -65,23 +65,23 @@ l
     ## [1] 1 2 3 4
     ## 
     ## $unif_sample
-    ##   [1] 0.65214512 0.80851314 0.19166511 0.92326354 0.52733675 0.56372918
-    ##   [7] 0.94646228 0.58841281 0.80172494 0.93209355 0.73040028 0.07748368
-    ##  [13] 0.32944273 0.91166126 0.78633698 0.72568661 0.91353494 0.80752717
-    ##  [19] 0.90587022 0.21581246 0.54261216 0.69837641 0.97332499 0.68305545
-    ##  [25] 0.35401212 0.45353475 0.10980450 0.29243761 0.45275121 0.47783053
-    ##  [31] 0.42032601 0.98256238 0.61665388 0.79048907 0.25993648 0.82528017
-    ##  [37] 0.20516720 0.08301680 0.18172892 0.49897025 0.39507834 0.36155326
-    ##  [43] 0.04026967 0.52670660 0.80069596 0.35532216 0.74259434 0.53249950
-    ##  [49] 0.35042338 0.27096166 0.34403004 0.09704454 0.75083475 0.75241172
-    ##  [55] 0.90674012 0.45883927 0.53514862 0.28333829 0.88535926 0.22985306
-    ##  [61] 0.89709881 0.21174821 0.22398873 0.92192349 0.94407337 0.86437765
-    ##  [67] 0.12546361 0.39389185 0.60952669 0.12482073 0.06888921 0.65460390
-    ##  [73] 0.30930541 0.04959462 0.76673640 0.88548804 0.02741130 0.49133372
-    ##  [79] 0.73120745 0.24260274 0.58330778 0.14981363 0.60311060 0.35235574
-    ##  [85] 0.27322476 0.63670652 0.41579516 0.01245878 0.81815972 0.39211504
-    ##  [91] 0.62312944 0.07533711 0.43081763 0.84375956 0.82835007 0.42612371
-    ##  [97] 0.77794890 0.44765223 0.27586016 0.91062405
+    ##   [1] 0.78288243 0.73290086 0.53675550 0.71255091 0.77600668 0.84266176
+    ##   [7] 0.59275762 0.91647767 0.06984312 0.71821740 0.29783592 0.81213433
+    ##  [13] 0.35285571 0.10304360 0.73673592 0.42280405 0.21876829 0.95664643
+    ##  [19] 0.38940950 0.58466136 0.62202702 0.46736345 0.03080936 0.42919022
+    ##  [25] 0.72723717 0.92304609 0.87909637 0.18926165 0.06426834 0.84576457
+    ##  [31] 0.37320959 0.43441095 0.68740225 0.33872126 0.41005525 0.68208542
+    ##  [37] 0.85747449 0.03213954 0.70202655 0.18716123 0.01018363 0.60581060
+    ##  [43] 0.94047885 0.11717810 0.26484933 0.01069098 0.91758995 0.86818532
+    ##  [49] 0.22741276 0.35281892 0.09222934 0.78094965 0.86971070 0.27817768
+    ##  [55] 0.41029422 0.91923044 0.15405880 0.16914343 0.24469118 0.45305655
+    ##  [61] 0.05673093 0.87148285 0.26100544 0.80905118 0.10873055 0.49221800
+    ##  [67] 0.97217590 0.13875519 0.67826612 0.49014203 0.56919488 0.30283931
+    ##  [73] 0.51282495 0.07361144 0.01374133 0.43121863 0.55671799 0.35613599
+    ##  [79] 0.87277276 0.12394502 0.63936934 0.06588555 0.08656866 0.15360512
+    ##  [85] 0.04789675 0.29656059 0.78684098 0.43014056 0.66937256 0.41163510
+    ##  [91] 0.39716772 0.08143956 0.36694648 0.61710250 0.61617573 0.37637611
+    ##  [97] 0.62247172 0.56742217 0.32978853 0.23000733
     ## 
     ## $mat
     ##      [,1] [,2] [,3] [,4]
@@ -90,7 +90,7 @@ l
     ## 
     ## $summary
     ##     Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
-    ## -3.01175 -0.62164  0.01077  0.01908  0.65948  3.17421
+    ## -3.54035 -0.62980  0.04321  0.03033  0.64141  3.41228
 
 ``` r
 l$mat
@@ -117,7 +117,7 @@ l[[4]]
 ```
 
     ##     Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
-    ## -3.01175 -0.62164  0.01077  0.01908  0.65948  3.17421
+    ## -3.54035 -0.62980  0.04321  0.03033  0.64141  3.41228
 
 Make a list that’s hopefully a bit more useful.
 
@@ -136,10 +136,10 @@ list_norm =
 list_norm[["b"]]
 ```
 
-    ##  [1]  6.9957740  1.2228439  1.4336591  5.5385582  9.2311750 -0.1286056
-    ##  [7] -1.2997259 -7.1354954  8.6781316  4.1379702  9.4634088 -0.5535114
-    ## [13] -1.1059175  8.9767870  3.0690197  3.8281352  8.2425438 -3.1198029
-    ## [19]  6.0916317  3.5553757
+    ##  [1]  7.7549792  0.9993607  5.2259652  7.6274905  6.6975488  5.0743307
+    ##  [7] -0.6557777 -4.5893323  0.3177344  2.4060794  9.7413038  1.0332552
+    ## [13]  3.8307906  5.2100411 -3.8979343 10.4132379  6.2175659  1.7737643
+    ## [19] -3.7805200  0.8272879
 
 Let’s reuse the function we wrote last time.
 
@@ -169,7 +169,7 @@ mean_and_sd(list_norm[["a"]])
     ## # A tibble: 1 × 2
     ##    mean    sd
     ##   <dbl> <dbl>
-    ## 1 -1.39  5.73
+    ## 1  1.13  5.52
 
 ``` r
 mean_and_sd(list_norm[["b"]])
@@ -178,7 +178,7 @@ mean_and_sd(list_norm[["b"]])
     ## # A tibble: 1 × 2
     ##    mean    sd
     ##   <dbl> <dbl>
-    ## 1  3.36  4.65
+    ## 1  3.11  4.41
 
 ``` r
 mean_and_sd(list_norm[["c"]])
@@ -187,7 +187,7 @@ mean_and_sd(list_norm[["c"]])
     ## # A tibble: 1 × 2
     ##    mean    sd
     ##   <dbl> <dbl>
-    ## 1  1.02  11.3
+    ## 1 0.422  6.66
 
 ``` r
 mean_and_sd(list_norm[["d"]])
@@ -196,7 +196,7 @@ mean_and_sd(list_norm[["d"]])
     ## # A tibble: 1 × 2
     ##    mean    sd
     ##   <dbl> <dbl>
-    ## 1  1.86  8.59
+    ## 1  2.75  9.96
 
 ## Use a for loop
 
@@ -218,25 +218,25 @@ output
     ## # A tibble: 1 × 2
     ##    mean    sd
     ##   <dbl> <dbl>
-    ## 1 -1.39  5.73
+    ## 1  1.13  5.52
     ## 
     ## [[2]]
     ## # A tibble: 1 × 2
     ##    mean    sd
     ##   <dbl> <dbl>
-    ## 1  3.36  4.65
+    ## 1  3.11  4.41
     ## 
     ## [[3]]
     ## # A tibble: 1 × 2
     ##    mean    sd
     ##   <dbl> <dbl>
-    ## 1  1.02  11.3
+    ## 1 0.422  6.66
     ## 
     ## [[4]]
     ## # A tibble: 1 × 2
     ##    mean    sd
     ##   <dbl> <dbl>
-    ## 1  1.86  8.59
+    ## 1  2.75  9.96
 
 ## Do the ame thing
 
@@ -312,7 +312,7 @@ mean_and_sd(listcol_df[["samp"]][["a"]])
     ## # A tibble: 1 × 2
     ##    mean    sd
     ##   <dbl> <dbl>
-    ## 1 -1.39  5.73
+    ## 1  1.13  5.52
 
 ``` r
 mean_and_sd(listcol_df[["samp"]][["b"]])
@@ -321,7 +321,7 @@ mean_and_sd(listcol_df[["samp"]][["b"]])
     ## # A tibble: 1 × 2
     ##    mean    sd
     ##   <dbl> <dbl>
-    ## 1  3.36  4.65
+    ## 1  3.11  4.41
 
 ``` r
 #use map to do the same thing
@@ -332,25 +332,25 @@ map(listcol_df[["samp"]], mean_and_sd) #mapping across samp column that was extr
     ## # A tibble: 1 × 2
     ##    mean    sd
     ##   <dbl> <dbl>
-    ## 1 -1.39  5.73
+    ## 1  1.13  5.52
     ## 
     ## $b
     ## # A tibble: 1 × 2
     ##    mean    sd
     ##   <dbl> <dbl>
-    ## 1  3.36  4.65
+    ## 1  3.11  4.41
     ## 
     ## $c
     ## # A tibble: 1 × 2
     ##    mean    sd
     ##   <dbl> <dbl>
-    ## 1  1.02  11.3
+    ## 1 0.422  6.66
     ## 
     ## $d
     ## # A tibble: 1 × 2
     ##    mean    sd
     ##   <dbl> <dbl>
-    ## 1  1.86  8.59
+    ## 1  2.75  9.96
 
 ``` r
 #Difference between map and map_dbl
@@ -382,10 +382,10 @@ listcol_df |>
     ## # A tibble: 4 × 4
     ##   name  samp         output             iqr
     ##   <chr> <named list> <named list>     <dbl>
-    ## 1 a     <dbl [20]>   <tibble [1 × 2]>  5.84
-    ## 2 b     <dbl [20]>   <tibble [1 × 2]>  7.54
-    ## 3 c     <dbl [20]>   <tibble [1 × 2]> 17.8 
-    ## 4 d     <dbl [20]>   <tibble [1 × 2]> 12.3
+    ## 1 a     <dbl [20]>   <tibble [1 × 2]>  7.13
+    ## 2 b     <dbl [20]>   <tibble [1 × 2]>  5.64
+    ## 3 c     <dbl [20]>   <tibble [1 × 2]>  8.45
+    ## 4 d     <dbl [20]>   <tibble [1 × 2]> 13.2
 
 ``` r
 listcol_df |> 
@@ -398,10 +398,10 @@ listcol_df |>
     ## # A tibble: 4 × 4
     ##   name   mean    sd   iqr
     ##   <chr> <dbl> <dbl> <dbl>
-    ## 1 a     -1.39  5.73  5.84
-    ## 2 b      3.36  4.65  7.54
-    ## 3 c      1.02 11.3  17.8 
-    ## 4 d      1.86  8.59 12.3
+    ## 1 a     1.13   5.52  7.13
+    ## 2 b     3.11   4.41  5.64
+    ## 3 c     0.422  6.66  8.45
+    ## 4 d     2.75   9.96 13.2
 
 ### NSDUH
 
@@ -505,4 +505,176 @@ nsduh_df =
   ) |> 
   mutate(table = map(table_n, nsduh_table_format, html = nsduh_html)) |> 
   unnest(table)
+
+
+nsduh_df |> 
+  filter(State == "New York")
+```
+
+    ## # A tibble: 3 × 13
+    ##   drug      table_n State   `12+(2013-2014)` `12+(2014-2015)` `12-17(2013-2014)`
+    ##   <chr>       <dbl> <chr>   <chr>            <chr>            <chr>             
+    ## 1 marijuana       1 New Yo… 14.24b           15.04            13.94             
+    ## 2 cocaine         4 New Yo… 2.28             2.54             0.71              
+    ## 3 heroin          5 New Yo… 0.38a            0.52             0.13              
+    ## # ℹ 7 more variables: `12-17(2014-2015)` <chr>, `18-25(2013-2014)` <chr>,
+    ## #   `18-25(2014-2015)` <chr>, `26+(2013-2014)` <chr>, `26+(2014-2015)` <chr>,
+    ## #   `18+(2013-2014)` <chr>, `18+(2014-2015)` <chr>
+
+``` r
+#creating a new anonymous function "x" within the map function
+nsduh_df =
+  tibble(
+    drug = c("marijuana", "cocaine", "heroin"),
+    table_n = c(1, 4, 5)
+  ) |> 
+  mutate(table = 
+      map(table_n, \(x) nsduh_table_format(html = nsduh_html, table_num = x))) |> 
+  unnest(table)
+```
+
+### Weather data
+
+``` r
+weather_df = 
+  rnoaa::meteo_pull_monitors(
+    c("USW00094728", "USW00022534", "USS0023B17S"),
+    var = c("PRCP", "TMIN", "TMAX"), 
+    date_min = "2021-01-01",
+    date_max = "2022-12-31") |>
+  mutate(
+    name = recode(
+      id, 
+      USW00094728 = "CentralPark_NY", 
+      USW00022534 = "Molokai_HI",
+      USS0023B17S = "Waterhole_WA"),
+    tmin = tmin / 10,
+    tmax = tmax / 10) |>
+  select(name, id, everything())
+```
+
+    ## Registered S3 method overwritten by 'hoardr':
+    ##   method           from
+    ##   print.cache_info httr
+
+    ## using cached file: C:\Users\jyang\AppData\Local/R/cache/R/rnoaa/noaa_ghcnd/USW00094728.dly
+
+    ## date created (size, mb): 2024-09-26 10:24:30.968033 (8.668)
+
+    ## file min/max dates: 1869-01-01 / 2024-09-30
+
+    ## using cached file: C:\Users\jyang\AppData\Local/R/cache/R/rnoaa/noaa_ghcnd/USW00022534.dly
+
+    ## date created (size, mb): 2024-09-26 10:24:51.134281 (3.94)
+
+    ## file min/max dates: 1949-10-01 / 2024-09-30
+
+    ## using cached file: C:\Users\jyang\AppData\Local/R/cache/R/rnoaa/noaa_ghcnd/USS0023B17S.dly
+
+    ## date created (size, mb): 2024-09-26 10:24:58.391098 (1.038)
+
+    ## file min/max dates: 1999-09-01 / 2024-09-30
+
+Create a list column
+
+``` r
+weather_nest = 
+  weather_df |> 
+  nest(data = date:tmin)
+```
+
+``` r
+weather_nest[["data"]][[1]] #taking just Central Park list
+```
+
+    ## # A tibble: 730 × 4
+    ##    date        prcp  tmax  tmin
+    ##    <date>     <dbl> <dbl> <dbl>
+    ##  1 2021-01-01   157   4.4   0.6
+    ##  2 2021-01-02    13  10.6   2.2
+    ##  3 2021-01-03    56   3.3   1.1
+    ##  4 2021-01-04     5   6.1   1.7
+    ##  5 2021-01-05     0   5.6   2.2
+    ##  6 2021-01-06     0   5     1.1
+    ##  7 2021-01-07     0   5    -1  
+    ##  8 2021-01-08     0   2.8  -2.7
+    ##  9 2021-01-09     0   2.8  -4.3
+    ## 10 2021-01-10     0   5    -1.6
+    ## # ℹ 720 more rows
+
+Let’s try regressing tmax on tmin. Linear Regression.
+
+``` r
+lm(tmax ~ tmin, data = weather_nest[["data"]][[1]]) #lm = linear model
+```
+
+    ## 
+    ## Call:
+    ## lm(formula = tmax ~ tmin, data = weather_nest[["data"]][[1]])
+    ## 
+    ## Coefficients:
+    ## (Intercept)         tmin  
+    ##       7.514        1.034
+
+``` r
+lm(tmax ~ tmin, data = weather_nest[["data"]][[2]])
+```
+
+    ## 
+    ## Call:
+    ## lm(formula = tmax ~ tmin, data = weather_nest[["data"]][[2]])
+    ## 
+    ## Coefficients:
+    ## (Intercept)         tmin  
+    ##     21.7547       0.3222
+
+``` r
+lm(tmax ~ tmin, data = weather_nest[["data"]][[3]])
+```
+
+    ## 
+    ## Call:
+    ## lm(formula = tmax ~ tmin, data = weather_nest[["data"]][[3]])
+    ## 
+    ## Coefficients:
+    ## (Intercept)         tmin  
+    ##       7.532        1.137
+
+``` r
+weather_nest |> 
+  mutate(model_fit = map(data, \(x) lm(tmax ~ tmin, data = x))) |> 
+  pull(model_fit) #to show that the above code worked, pulling model_fit column outputs
+```
+
+    ## [[1]]
+    ## 
+    ## Call:
+    ## lm(formula = tmax ~ tmin, data = x)
+    ## 
+    ## Coefficients:
+    ## (Intercept)         tmin  
+    ##       7.514        1.034  
+    ## 
+    ## 
+    ## [[2]]
+    ## 
+    ## Call:
+    ## lm(formula = tmax ~ tmin, data = x)
+    ## 
+    ## Coefficients:
+    ## (Intercept)         tmin  
+    ##     21.7547       0.3222  
+    ## 
+    ## 
+    ## [[3]]
+    ## 
+    ## Call:
+    ## lm(formula = tmax ~ tmin, data = x)
+    ## 
+    ## Coefficients:
+    ## (Intercept)         tmin  
+    ##       7.532        1.137
+
+``` r
+#We imported, nested, then regressed, the put it back in the table
 ```

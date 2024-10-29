@@ -235,5 +235,67 @@ nsduh_df =
   unnest(table)
 
 
+nsduh_df |> 
+  filter(State == "New York")
+
+#creating a new anonymous function "x" within the map function
+nsduh_df =
+  tibble(
+    drug = c("marijuana", "cocaine", "heroin"),
+    table_n = c(1, 4, 5)
+  ) |> 
+  mutate(table = 
+      map(table_n, \(x) nsduh_table_format(html = nsduh_html, table_num = x))) |> 
+  unnest(table)
 ```
+
+
+### Weather data
+
+```{r}
+weather_df = 
+  rnoaa::meteo_pull_monitors(
+    c("USW00094728", "USW00022534", "USS0023B17S"),
+    var = c("PRCP", "TMIN", "TMAX"), 
+    date_min = "2021-01-01",
+    date_max = "2022-12-31") |>
+  mutate(
+    name = recode(
+      id, 
+      USW00094728 = "CentralPark_NY", 
+      USW00022534 = "Molokai_HI",
+      USS0023B17S = "Waterhole_WA"),
+    tmin = tmin / 10,
+    tmax = tmax / 10) |>
+  select(name, id, everything())
+```
+
+Create a list column
+
+```{r}
+weather_nest = 
+  weather_df |> 
+  nest(data = date:tmin)
+```
+
+```{r}
+weather_nest[["data"]][[1]] #taking just Central Park list
+```
+
+Let's try regressing tmax on tmin. Linear Regression.
+
+```{r}
+lm(tmax ~ tmin, data = weather_nest[["data"]][[1]]) #lm = linear model
+lm(tmax ~ tmin, data = weather_nest[["data"]][[2]])
+lm(tmax ~ tmin, data = weather_nest[["data"]][[3]])
+```
+
+```{r}
+weather_nest |> 
+  mutate(model_fit = map(data, \(x) lm(tmax ~ tmin, data = x))) |> 
+  pull(model_fit) #to show that the above code worked, pulling model_fit column outputs
+
+#We imported, nested, then regressed, the put it back in the table
+```
+
 
