@@ -123,3 +123,23 @@ but with `map` instead
 output = map(list_norm, mean_and_sd)
 ```
 
+
+let's do a couple of other things
+
+```{r}
+output = map(list_norm, median)
+
+output = map_dbl(list_norm, IQR) #dbl simplifies the output from a list to something easier to see
+
+output = map_dfr(list_norm, mean_and_sd) #map into dataframne
+
+
+output = 
+  map(list_norm, mean_and_sd) |> 
+  bind_rows()
+```
+
+
+## List Columns
+
+
