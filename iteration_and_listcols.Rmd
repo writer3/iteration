@@ -142,4 +142,57 @@ output =
 
 ## List Columns
 
+```{r}
+listcol_df = 
+  tibble(
+    name = c("a", "b", "c", "d"), #need to have same # of things in name column and ilst_norm columns
+    samp = list_norm
+  )
+
+listcol_df #output shows that there are 20 numbers in each row
+
+listcol_df |> 
+  filter(name %in% c("a", "b")) #just get the first 2 rows
+
+
+listcol_df |> 
+  select(-samp)
+```
+
+```{r}
+mean_and_sd(listcol_df[["samp"]][["a"]])
+mean_and_sd(listcol_df[["samp"]][["b"]])
+
+#use map to do the same thing
+map(listcol_df[["samp"]], mean_and_sd) #mapping across samp column that was extracted from listcol_df and calculate mean_and_sd
+
+#Difference between map and map_dbl
+  #map by default always returns a list
+  #map_dbl makes the list of numbers into vectors (simplified)
+
+```
+
+Add a list column
+
+```{r}
+listcol_df |> 
+  mutate(output = map(samp, mean_and_sd)) #samp is a column in the dataframe (no need to extract), so map across column samp, and compute mean and sd and add a new column 
+
+listcol_df |> 
+  mutate(output = map(samp, mean_and_sd),
+  iqr = map_dbl(samp, IQR))
+
+listcol_df |> 
+  mutate(output = map(samp, mean_and_sd),
+  iqr = map_dbl(samp, IQR)) |> 
+  select(-samp) |> 
+  unnest(output) #similar to bindrows fx to df -- taking a nested  df and expanding it
+
+```
+
+
+```{r}
+
+```
+
 
