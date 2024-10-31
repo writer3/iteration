@@ -289,3 +289,6 @@ sim_res |>
 ```
 
 <img src="simulation_files/figure-gfm/unnamed-chunk-13-1.png" width="90%" />
+
+HW5 problem 3 take dataset nest it for 50 cities run some analysis and
+plot
