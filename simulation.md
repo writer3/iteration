@@ -233,3 +233,17 @@ sim_res |>
 ```
 
 <img src="simulation_files/figure-gfm/unnamed-chunk-11-1.png" width="90%" />
+
+``` r
+sim_res |> 
+  filter(sample_size == 30) |> 
+  #checking are the estimates of beta0 and beta1 related to each other?
+  ggplot(aes(x = beta0_hat, y = beta1_hat)) +
+  geom_point() 
+```
+
+<img src="simulation_files/figure-gfm/unnamed-chunk-11-2.png" width="90%" />
+
+``` r
+  #resulting plot is inverse relationship -> higher the y-intercept, smaller slope
+```
