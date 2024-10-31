@@ -247,3 +247,45 @@ sim_res |>
 ``` r
   #resulting plot is inverse relationship -> higher the y-intercept, smaller slope
 ```
+
+## Birthday problem
+
+If you put n = 10, 30, etc people into a room, what is the probability
+that at least 2 have the same birthday?
+
+Let’s put people in a room.
+
+``` r
+bday_sim = function(n) {
+  
+  bdays = sample(1:365, size = n, replace = TRUE) #draw 10 days at random out of 1-365, if someone was born day 22, another person can be born on day 22 for example.
+  
+  duplicate = length(unique(bdays)) < n #check for any duplicates, and FALSE if <n
+  
+  return(duplicate)
+  
+}
+
+bday_sim(10)
+```
+
+    ## [1] FALSE
+
+run this a lot
+
+``` r
+sim_res = 
+  expand_grid(
+    n = c(10, 50),
+    iter = 1:10000
+  ) |> 
+  mutate(res = map_lgl(n, bday_sim)) |>  #mutate, map across n sample size, can use map_lgl here since we know the funciton would result in TRUE or FALSE
+  group_by(n) |> 
+    summarize(prob = mean(res))
+
+sim_res |> 
+  ggplot(aes(x = n, y = prob )) +
+  geom_line()
+```
+
+<img src="simulation_files/figure-gfm/unnamed-chunk-13-1.png" width="90%" />
